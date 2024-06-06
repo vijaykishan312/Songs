@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Songs2",
+    "slug": "Songs2",
+    "scheme": "songs2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Images/splash_music.jpeg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Images/splash_music.jpeg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Images/splash_music.jpeg",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Images/splash_music.jpeg"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
