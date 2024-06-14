@@ -34,7 +34,7 @@ const DashboardScreen = () => {
 
     const renderItems = ({ item }) => {
         return (
-            <TouchableOpacity onPress={()=>{router.navigate({ pathname: "/SongList", params:item})}} activeOpacity={0.5} style={{ backgroundColor: Colors.black, width: ScreenRatio(18), height: ScreenRatio(23), borderRadius: ScreenRatio(1.5), marginRight: ScreenRatio(0.7), marginLeft: ScreenRatio(1), marginTop: ScreenRatio(1), shadowOffset: { height: 5, width: 5 }, shadowOpacity: 1, shadowRadius: 7, elevation: 3, shadowColor: Colors.orange8 }}>
+            <TouchableOpacity onPress={()=>{router.navigate({ pathname: "/SongPlay", params:item})}} activeOpacity={0.5} style={{ backgroundColor: Colors.black, width: ScreenRatio(18), height: ScreenRatio(23), borderRadius: ScreenRatio(1.5), marginRight: ScreenRatio(0.7), marginLeft: ScreenRatio(1), marginTop: ScreenRatio(1), shadowOffset: { height: 5, width: 5 }, shadowOpacity: 1, shadowRadius: 7, elevation: 3, shadowColor: Colors.orange8 }}>
                 <Image source={item?.image} style={{ height: ScreenRatio(17), width: ScreenRatio(17), resizeMode: "contain", alignSelf: "center", marginTop: ScreenRatio(0.3) }} />
                 <View style={{ paddingHorizontal: ScreenRatio(1), marginTop: ScreenRatio(0.8) }}>
                     <Text style={{ fontSize: ScreenRatio(1.6), color: Colors.orange8, fontWeight: "600" }}>

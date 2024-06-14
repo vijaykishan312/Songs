@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Songs2",
-    "slug": "Songs2",
+    "slug": "songs",
     "scheme": "songs2",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -26,6 +26,15 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a6776915-8547-4da7-8269-9d563c109404"
+      }
+    },
+    "owner": "vkvyas312"
   }
 }
