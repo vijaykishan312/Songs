@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vksongs"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/Images/splash_music.jpeg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.vksongs"
     },
     "web": {
       "favicon": "./assets/Images/splash_music.jpeg"
