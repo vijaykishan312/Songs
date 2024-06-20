@@ -6,13 +6,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Images from '../assets/Images';
 import { router, useLocalSearchParams } from 'expo-router';
 import { Audio } from "expo-av";
+import { Waveform, type IWaveformRef } from '@simform_solutions/react-native-audio-waveform';
+
 
 // const sound = new Audio.Sound()
 const SongList = () => {
   const item: any = useLocalSearchParams();
   console.log(" This is item -=-=-=-=-=-=-=-=- " + JSON.stringify(item));
 
-
+  const path = require('../Songs/song2.mp3'); // path to the audio file for which you want to show waveform
+  const ref = React.useRef<IWaveformRef>(null);
 
   return (
     <ImageBackground resizeMode='cover' style={{ flex: 1, paddingHorizontal: ScreenRatio(1) }} source={Images.wallpaper1_image}>
@@ -42,12 +45,23 @@ const SongList = () => {
          
         </View>
         <View style={{height:ScreenRatio(25), width:"90%", backgroundColor:Colors.gray20, alignSelf:"center", borderRadius:ScreenRatio(1),shadowOffset: { height: 0, width: 0 }, shadowOpacity: 1, shadowRadius: 7, elevation: 3, shadowColor: Colors.orange10,marginBottom:ScreenRatio(10) }}>
-          <View style={{height:ScreenRatio(14)}}>
+          <View style={{ height: ScreenRatio(14) }}>
+          {/* <Waveform
+            mode="static"
+            ref={ref}
+            path={path}
+            candleSpace={2}
+            candleWidth={4}
+            scrubColor="white"
+            onPlayerStateChange={playerState=>console.log(playerState)}
+            onPanStateChange={isMoving=>console.log(isMoving)}
+        /> */}
             {/* <WaveForm
               waveFormStyle={{waveColor:'red', scrubColor:'white'}}
               // source={{ uri: 'https://url/path/to/the/file.mp3' }}
-              source={require('../Songs/song2.mp3')}
+              source={)}
             /> */}
+            {/* ../Songs/song1.mp3 */}
           </View>
           <View style={{ flexDirection: "row", justifyContent: "space-evenly", marginTop: ScreenRatio(3) }}>
             <TouchableOpacity onPress={async () => {}}
