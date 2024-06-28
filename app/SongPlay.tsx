@@ -7,7 +7,7 @@ import Images from '../assets/Images';
 import { router, useLocalSearchParams } from 'expo-router';
 import { Audio } from "expo-av";
 import { Waveform, type IWaveformRef } from '@simform_solutions/react-native-audio-waveform';
-
+import { Marquee } from '@animatereactnative/marquee';
 
 // const sound = new Audio.Sound()
 const SongList = () => {
@@ -62,6 +62,11 @@ const SongList = () => {
               source={)}
             /> */}
             {/* ../Songs/song1.mp3 */}
+            <Marquee spacing={20} speed={2}>
+              <Text style={{ fontSize: ScreenRatio(3), color: Colors.orange8, fontWeight: "700", textAlign: "center" }}>
+                {"Vijay kishan vyas"}
+              </Text>
+            </Marquee>
           </View>
           <View style={{ flexDirection: "row", justifyContent: "space-evenly", marginTop: ScreenRatio(3) }}>
             <TouchableOpacity onPress={async () => {}}
