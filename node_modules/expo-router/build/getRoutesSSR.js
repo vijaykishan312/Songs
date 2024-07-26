@@ -22,8 +22,7 @@ function getRoutes(contextModule, options = {}) {
                 return {
                     type: 'layout',
                     loadRoute: () => ({
-                        default: require('./views/Navigator')
-                            .DefaultNavigator,
+                        default: () => null,
                     }),
                     // Generate a fake file name for the directory
                     contextKey: 'expo-router/build/views/Navigator.js',
@@ -35,10 +34,9 @@ function getRoutes(contextModule, options = {}) {
             }
             else if (route === '_sitemap' && type === 'route') {
                 return {
-                    loadRoute() {
-                        const { Sitemap, getNavOptions } = require('./views/Sitemap');
-                        return { default: Sitemap, getNavOptions };
-                    },
+                    loadRoute: () => ({
+                        default: () => null,
+                    }),
                     route: '_sitemap',
                     type: 'route',
                     contextKey: 'expo-router/build/views/Sitemap.js',
@@ -50,9 +48,9 @@ function getRoutes(contextModule, options = {}) {
             }
             else if (route === '+not-found' && type === 'route') {
                 return {
-                    loadRoute() {
-                        return { default: require('./views/Unmatched').Unmatched };
-                    },
+                    loadRoute: () => ({
+                        default: () => null,
+                    }),
                     type: 'route',
                     route: '+not-found',
                     contextKey: 'expo-router/build/views/Unmatched.js',
@@ -79,4 +77,4 @@ var getRoutesCore_2 = require("./getRoutesCore");
 Object.defineProperty(exports, "generateDynamic", { enumerable: true, get: function () { return getRoutesCore_2.generateDynamic; } });
 Object.defineProperty(exports, "extrapolateGroups", { enumerable: true, get: function () { return getRoutesCore_2.extrapolateGroups; } });
 Object.defineProperty(exports, "getIgnoreList", { enumerable: true, get: function () { return getRoutesCore_2.getIgnoreList; } });
-//# sourceMappingURL=getRoutes.js.map
+//# sourceMappingURL=getRoutesSSR.js.map
